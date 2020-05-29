@@ -1,0 +1,90 @@
+{
+  "name": "thresh",
+  "version": "0.1.0",
+  "productName": "Thresh",
+  "description": "团队内部提高测试开发效率的一款自动造单工具",
+  "main": "./src/main/main.js",
+  "scripts": {
+    "start": "npm run start:web && wait-on http://localhost:3000 && cross-env NODE_ENV=development electron-forge start",
+    "start:web": "cross-env APP_ROOT=src/render PORT=3000 umi dev",
+    "build": "npm run build:web && electron-forge make",
+    "build:web": "cross-env NODE_ENV=production APP_ROOT=src/render umi build",
+    "test": "umi test",
+    "lint": "eslint {src,mock,tests}/**/*.{js,jsx} --fix",
+    "precommit": "lint-staged"
+  },
+  "keywords": [
+    "electron",
+    "react",
+    "umi"
+  ],
+  "author": "jianhao",
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "make_targets": {
+        "win32": [
+          "squirrel"
+        ],
+        "darwin": [
+          "zip"
+        ],
+        "linux": [
+          "deb",
+          "rpm"
+        ]
+      },
+      "electronPackagerConfig": {
+        "packageManager": "yarn",
+        "icon": "src/render/assets/icon.icns",
+        "asar": true,
+        "overwrite": true
+      },
+      "electronWinstallerConfig": {
+        "name": "Thresh"
+      },
+      "electronInstallerDebian": {},
+      "electronInstallerRedhat": {},
+      "github_repository": {
+        "owner": "jianhao",
+        "name": "Thresh"
+      },
+      "windowsStoreConfig": {
+        "packageName": "Thresh",
+        "name": "Thresh"
+      }
+    }
+  },
+  "dependencies": {
+    "antd": "^3.19.5",
+    "dva": "^2.6.0-beta.6",
+    "electron-renderer": "^2.0.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@umijs/fabric": "^2.0.8",
+    "babel-eslint": "^9.0.0",
+    "cross-env": "^7.0.2",
+    "electron-forge": "^5.2.4",
+    "electron-prebuilt-compile": "8.2.0",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.2",
+    "prettier": "^2.0.5",
+    "react-test-renderer": "^16.7.0",
+    "stylelint": "^13.5.0",
+    "umi": "^2.7.7",
+    "umi-plugin-react": "^1.8.4",
+    "wait-on": "^5.0.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}
