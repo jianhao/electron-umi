@@ -1,8 +1,0 @@
-**/*.ejs
-**/*.dll.js
-webpack.config.js
-.umi
-__tests__
-/node_modules
-dist
-out

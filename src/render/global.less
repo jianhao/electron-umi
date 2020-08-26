@@ -1,0 +1,140 @@
+@import '~@/styles/base.less';
+
+body,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+input,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: left;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: @text-color;
+  font-size: 28px;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+fieldset,
+img {
+  border: 0 none;
+}
+
+address,
+caption,
+em,
+strong,
+th,
+i {
+  font-weight: 400;
+  font-style: normal;
+}
+
+ol,
+ul {
+  list-style-position: outside;
+  list-style-type: none;
+}
+
+// 修改搜索框样式，参考客户搜索页样式
+.customSearch {
+  height: 76px;
+  padding: 0;
+  overflow: hidden;
+  background: #fff;
+  .am-search-input {
+    height: 76px;
+    background: rgba(247, 247, 247, 1);
+    border-radius: 38px;
+    .am-search-synthetic-ph {
+      height: 76px;
+      padding: 0;
+      .am-search-synthetic-ph-container {
+        height: 76px;
+        line-height: 80px;
+      }
+    }
+    .am-search-value,
+    .am-search-cancel {
+      height: 76px;
+      line-height: 80px;
+      &::placeholder {
+        height: 76px;
+        line-height: 80px;
+      }
+    }
+    .am-search-clear {
+      top: 10px;
+      right: 10px;
+    }
+  }
+}
+
+/** modal popup 重写 */
+.am-modal.am-modal-popup.am-modal-popup-slide-up {
+  .am-modal-content {
+    border-radius: 13px 13px 0 0;
+  }
+  .am-modal-header {
+    padding: 28px 0;
+    background-color: #fcfcfc;
+  }
+}
+
+/** alert modal */
+.am-modal-alert-content {
+  color: @heading-color;
+  font-weight: bold;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 48px;
+}
+.am-modal-footer {
+  .am-modal-button {
+    font-size: 34px;
+  }
+}
+
+/** picker 的样式重写，主要是为了兼容部分安卓机型不支持 background-image: linear-gradient... */
+.am-picker-col-item {
+  color: @text-color;
+
+  &.am-picker-col-item-selected {
+    color: @heading-color;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  html:not([data-scale]) {
+    .am-button-ghost::before {
+      border: none;
+    }
+  }
+}

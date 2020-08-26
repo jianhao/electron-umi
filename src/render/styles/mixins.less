@@ -1,0 +1,97 @@
+// 自动延展背景图片
+.backgroundCover() {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+// 省略
+.ellipsis-single-line() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.ellipsis-more-line(@line: 2) {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: @line;
+  -webkit-box-orient: vertical;
+}
+
+.flexCenter() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hairline(@lc, @hp: 0) {
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: @hp;
+  left: @hp;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: @lc;
+  transform: scaleY(0.5);
+  transform-origin: 50% 100%;
+  content: '';
+}
+
+.hairline-after(@lc: @divider-color, @hp: 0) {
+  position: relative;
+  &::after {
+    bottom: 0;
+    .hairline(@lc, @hp);
+  }
+}
+
+.hairline-before(@lc: @divider-color, @hp: 0) {
+  position: relative;
+  &::before {
+    top: 0;
+    .hairline(@lc, @hp);
+  }
+}
+
+.title (@size: 30px) {
+  color: @heading-color;
+  font-weight: bold;
+  font-weight: 500;
+  font-size: @size;
+}
+
+// 去除按钮默认边框和颜色
+.btnMixins(@color: #fff, @background: @primary-color) {
+  color: @color;
+  background: @background;
+  &::before {
+    border: none;
+  }
+  &:active {
+    color: @color;
+  }
+}
+
+// 单行溢出显示省略号
+.overflow-omit-1(@width: 480px ) {
+  max-width: @width;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+}
+
+// 多行溢出显示省略号
+.overflow-omit-2(@clap: 2, @width: 480px ) {
+  display: -webkit-box;
+  max-width: @width;
+  overflow: hidden;
+  word-wrap: break-word; // 在长单词或 URL 地址内部进行换行
+  word-break: break-all; // 允许在单词内换行
+  -webkit-line-clamp: @clap;
+  -webkit-box-orient: vertical;
+}

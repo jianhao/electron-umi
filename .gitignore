@@ -8,12 +8,14 @@
 /package-lock.json
 
 # production
-dist
+/dist
 
 # misc
 .DS_Store
 
 # umi
 .umi
-.umi-production
-out
+/src/.umi
+/src/.umi-production
+/src/.umi-test
+/.env.local

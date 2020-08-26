@@ -1,17 +1,25 @@
 module.exports = {
-  "extends": [require.resolve('@umijs/fabric/dist/eslint')],
-  "rules": {
-    "no-console": 0, // 不允许有 console
-    "import/no-extraneous-dependencies": 0, // 判断是否是开发依赖，不太准确，所以禁用
-    "arrow-spacing": ["error", { "before": true, "after": true }], // 箭头函数的箭头前后必须有空格
-    "func-names": 0, // 允许使用匿名函数
-    'no-unused-expressions': [ // 禁止无用的表达式
+  extends: [require.resolve('@umijs/fabric/dist/eslint')],
+  rules: {
+    'react/jsx-first-prop-new-line': 'error',
+    'react/jsx-max-props-per-line': [
       'error',
       {
-          allowShortCircuit: true,
-          allowTernary: true,
-          allowTaggedTemplates: true
-      }
-  ],
-  }
+        maximum: 1,
+        when: 'multiline',
+      },
+    ],
+    'react/jsx-closing-bracket-location': [
+      'error',
+      {
+        nonEmpty: 'tag-aligned',
+        selfClosing: 'tag-aligned',
+      },
+    ],
+    semi: ['error', 'never'],
+    indent: ['error', 2, { SwitchCase: 1 }],
+    'no-plusplus': 'off',
+    'react/sort-comp': 'off',
+    'no-unused-expressions': 'off',
+  },
 }

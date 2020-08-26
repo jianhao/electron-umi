@@ -3,7 +3,13 @@ export default [
     path: '/',
     component: '../layouts/index',
     routes: [
-      { path: '/', component: './index' }
-    ]
-  }
- ]
+      { path: '/', redirect: '/home' },
+      {
+        path: '/home',
+        title: '首页',
+        component: './Home',
+      },
+      // { component: './404' },
+    ],
+  },
+]

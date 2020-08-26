@@ -1,0 +1,49 @@
+.spinner-detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 0;
+  text-align: center;
+}
+
+.spinnerContent {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  animation: rotate1 2s infinite linear;
+}
+
+.dot1,
+.dot2 {
+  position: absolute;
+  top: 0;
+  display: inline-block;
+  width: 60%;
+  height: 60%;
+  background-color: #ff8903;
+  border-radius: 100%;
+  animation: bounce1 2s infinite ease-in-out;
+}
+
+.dot2 {
+  top: auto;
+  bottom: 0;
+  animation-delay: -1s;
+}
+@keyframes rotate1 {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes bounce1 {
+  0%,
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
