@@ -112,6 +112,7 @@ export const bridges = {
       } else {
         window.open(url)
         setTimeout(() => {
+          console.log('openWebview setTimeout')
           // eslint-disable-next-line @typescript-eslint/no-unused-expressions
           window[callbackName] && window[callbackName]({})
         }, 1000)

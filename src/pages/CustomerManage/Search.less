@@ -1,0 +1,45 @@
+@import '~@/styles/base.less';
+
+.customerSearch {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  padding: 20px 40px 40px 26px;
+  overflow: auto;
+  background: #fff;
+
+  .customerSearch {
+    margin-bottom: 30px;
+  }
+
+  .customerListWrap {
+    padding-bottom: 30px;
+    padding-left: 14px;
+    .inviteCustomerBtn {
+      width: 220px;
+      height: 72px;
+      line-height: 72px;
+      background: rgba(255, 137, 3, 1);
+      border: 0;
+      border-radius: 6px;
+      &::before {
+        display: none;
+      }
+      span {
+        display: inline-block;
+        height: 100%;
+        color: rgba(255, 255, 255, 1);
+        font-weight: 500;
+        font-size: 32px;
+        font-family: PingFangSC-Medium, PingFang SC;
+        line-height: 72px;
+      }
+    }
+  }
+  .noMoreDate {
+    width: 100%;
+    font-size: 26px;
+    line-height: 100px;
+    text-align: center;
+  }
+}

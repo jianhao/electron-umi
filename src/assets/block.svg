@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="34px" viewBox="0 0 40 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>认证备份 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="40.967812%" y1="100%" x2="67.494342%" y2="-17.3070515%" id="linearGradient-1">
+            <stop stop-color="#FF5400" offset="0%"></stop>
+            <stop stop-color="#F8A339" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="39.6314168%" y1="100%" x2="70.0827906%" y2="-17.3070515%" id="linearGradient-2">
+            <stop stop-color="#FF5400" offset="0%"></stop>
+            <stop stop-color="#F8A339" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="认证备份-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组" transform="translate(2.000000, 2.000000)">
+            <path d="M26.7196364,28.1906638 L26.7196364,2.41205436 L22.8276364,0 L8.64054545,5.87945637 L8.64054545,10.4293874 L0.800545455,12.964349 L0.800545455,28.1906638 L0,28.1906638 L0,30 L2.55945455,30 L2.55945455,14.0196967 L12.9589091,10.8548355 L12.9589091,30 L20.1587273,30 L20.1587273,28.0405751 L18.5589091,28.0405751 L18.5589091,10.5522947 L14.784,8.44159937 L10.5585455,9.80776049 L10.5585455,6.93362222 L20.7989091,2.71223163 L20.7989091,29.9988182 L28,29.9988182 L28,28.189482 L26.7196364,28.189482 L26.7196364,28.1906638 Z M4,18 L12,15.8573029 L12,13 L4,15.2860663 L4,18 L4,18 Z M4,22 L12,20.3328978 L12,17 L4,19.0002613 L4,22 Z M4,26 L12,25.0762737 L12,22 L4,23.0768767 L4,26 Z M4,30 L12,29.8566629 L12,27 L4,27.2866741 L4,30 L4,30 Z" id="形状" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
+            <circle id="椭圆形" stroke="#FFFFFF" stroke-width="2" fill="url(#linearGradient-2)" cx="28" cy="22" r="9"></circle>
+            <polyline id="路径-6" stroke="#FFFFFF" stroke-width="3" points="23 22 26.6666667 25 32 18"></polyline>
+        </g>
+    </g>
+</svg>

@@ -125,6 +125,15 @@ export const getLastString = (str, num) => {
   return ''
 }
 
+/** 设置meta */
+export const setViewportMeta = () => {
+  const metaDom = document.createElement('meta')
+  metaDom.name = 'viewport'
+  metaDom.content =
+    'width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no'
+  document.head.appendChild(metaDom)
+}
+
 /** 设置 title */
 export function changeTitle(title) {
   document.setTitle = t => {
