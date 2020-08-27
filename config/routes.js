@@ -3,11 +3,11 @@ export default [
     path: '/',
     component: '@/layouts/index',
     routes: [
-      { path: '/', redirect: '/customerManage' },
+      { path: '/', redirect: '/home' },
       {
-        path: '/customerManage',
-        title: '客户管理',
-        component: './CustomerManage',
+        path: '/home',
+        title: '首页',
+        component: './Home',
       },
       // { component: './404' },
     ],
