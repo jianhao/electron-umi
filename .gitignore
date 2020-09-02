@@ -9,6 +9,8 @@
 
 # production
 /dist
+/src/dist
+release/
 
 # misc
 .DS_Store
@@ -18,5 +20,6 @@
 /src/.umi
 /src/render/.umi
 /src/.umi-production
+/src/render/.umi-production
 /src/.umi-test
 /.env.local

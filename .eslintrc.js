@@ -18,8 +18,9 @@ module.exports = {
     ],
     semi: ['error', 'never'],
     indent: ['error', 2, { SwitchCase: 1 }],
-    'no-plusplus': 'off',
-    'react/sort-comp': 'off',
-    'no-unused-expressions': 'off',
+    'no-plusplus': 0,
+    'react/sort-comp': 0,
+    'no-unused-expressions': 0,
+    'array-callback-return': 0,
   },
 }

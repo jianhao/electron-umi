@@ -1,13 +1,13 @@
 export default [
   {
     path: '/',
-    component: '@/layouts/index',
+    component: '../layouts/index',
     routes: [
       { path: '/', redirect: '/index' },
       {
         path: '/index',
-        title: '首页',
-        component: './Console',
+        title: '客户管理',
+        component: './Test',
       },
       // { component: './404' },
     ],
